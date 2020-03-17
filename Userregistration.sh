@@ -3,12 +3,12 @@ shopt -s extglob
 
 echo "Welcome to the User Registration "
 
-echo "Enter the full name "
+echo "Enter the first, last and email id: - "
 read firstName lastName email
 
 firstNameRegex="^[A-Z][A-Za-z]{2,}$"
 lastNameRegex="^[A-Z][A-Za-z]{2,}$"
-emailRegex="^[a-z][.a-z]?+@[a-z.]+[a-z][.a-z]?$"
+emailRegex="^[a-z][.a-z]?+@[a-z.]+[a-z]{2,4}[.a-z]{2,4}?$"
 
 function checkUserName() {
 
