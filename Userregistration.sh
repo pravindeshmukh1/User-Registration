@@ -28,9 +28,9 @@ function checkMobileNumber() {
 
 	if [[ $mobileNumber =~ $mobileNumberRegex ]]
 	then
-			echo "Valid $1"
+			echo "Valid"
 	else
-			echo "Invalid $1"
+			echo "Invalid"
 	fi
 }
 checkMobileNumber
