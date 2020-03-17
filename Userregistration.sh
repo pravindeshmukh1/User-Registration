@@ -3,19 +3,22 @@ shopt -s extglob
 
 echo "Welcome to the User Registration "
 
-
-read -p "Enter the last Name :- " lastName
+echo "Enter the full name "
+read firstName lastName email
 
 firstNameRegex="^[A-Z][A-Za-z]{2,}$"
 lastNameRegex="^[A-Z][A-Za-z]{2,}$"
+emailRegex="^[a-z][.a-z]?+@[a-z.]+[a-z][.a-z]?$"
 
 function checkUserName() {
 
-	if [[ $lastName =~ $lastNameRegex ]]
+	if [[ $1 =~ $2 ]]
 	then
-			echo "Valid"
+			echo "Valid $1"
 	else
-			echo "Invalid"
+			echo "Invalid $1"
 	fi
 }
-checkUserName
+checkUserName $firstName $firstNameRegex
+checkUserName $lastName $lastNameRegex
+checkUserName $email	$emailRegex
