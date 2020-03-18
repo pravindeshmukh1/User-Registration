@@ -46,7 +46,7 @@ checkMobileNumber
 
 function passwordValidation() {
 
-if [[ $password =~ $passwordRegex ]]
+	if [[ $password =~ $passwordRegex ]]
         then
                         echo "Valid"
         else
