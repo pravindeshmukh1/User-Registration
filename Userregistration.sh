@@ -18,7 +18,7 @@ mobileNumberRegex="^[0-9]{2}\s[0-9]{10}$"
 
 minimumnCharacterRegex="^[A-Za-z0-9]{8,}$"
 upperCaseCharacterRegex=".*[A-Z].*$"
-
+atLeastOneNumericNumber=".*[0-9].*$"
 
 function checkUserDetails() {
 
@@ -47,7 +47,7 @@ checkMobileNumber
 
 function passwordValidation() {
 
-	if [[ $password =~ $minimumnCharacterRegex && $password =~ $upperCaseCharacterRegex ]]
+	if [[ $password =~ $minimumnCharacterRegex && $password =~ $upperCaseCharacterRegex && $password =~ $atLeastOneNumericNumber ]]
         then
                         echo "Valid"
         else
